@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Card} from 'react-bootstrap';
+import ProductModal from '../Modal/Modal';
 import './Product.css'
 
 const Product = props => {
@@ -25,7 +26,7 @@ const Product = props => {
                             </div>
                         </div>
                         <div className="card-button mt-4">
-                            <Button className='btn btn-success m-2'>Details</Button>
+                            <ProductModal className='btn btn-success m-2'></ProductModal>
                             <Button onClick={setCount} className='btn btn-success m-2'>Add to Cart</Button>
                         </div>
                     </Card.Body>
