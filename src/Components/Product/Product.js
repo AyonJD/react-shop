@@ -3,8 +3,8 @@ import { Button, Card} from 'react-bootstrap';
 import './Product.css'
 
 const Product = props => {
+    const { setCount } = props;
     const { image, title, description, price, rating } = props.product;
-    
     return (
         <div className='col-md-4 col-sm-6 col-12 mb-3'>
                 <Card className='m-2 card-height'>
@@ -13,7 +13,7 @@ const Product = props => {
                         <div className="card-content">
                             <Card.Title>{ title }</Card.Title>
                             <Card.Text>
-                                {description.slice(0, 100)}
+                                {description.slice(0, 100)}...
                             </Card.Text>
                         </div>
                         <div className="price">
@@ -25,8 +25,8 @@ const Product = props => {
                             </div>
                         </div>
                         <div className="card-button mt-4">
-                            <Button className='btn btn-success mx-2'>Details</Button>
-                            <Button className='btn btn-success mx-2'>Add to Cart</Button>
+                            <Button className='btn btn-success m-2'>Details</Button>
+                            <Button onClick={setCount} className='btn btn-success m-2'>Add to Cart</Button>
                         </div>
                     </Card.Body>
                 </Card>

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { CardGroup } from 'react-bootstrap';
 import Product from '../Product/Product';
 
-const Products = () => {
+const Products = (props) => {
+    const { setCount } = props;
     const [products, setProducts] = useState([]);
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
@@ -14,7 +15,7 @@ const Products = () => {
             <div className='row'>
                 <CardGroup>
                 {
-                    products.map(product => <Product product = {product} key = {product.id}></Product>)
+                    products.map(product => <Product setCount = {setCount} product = {product} key = {product.id}></Product>)
                 }
                 </CardGroup>
             </div>
