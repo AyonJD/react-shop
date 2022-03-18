@@ -26,7 +26,7 @@ const Product = props => {
                             </div>
                         </div>
                         <div className="card-button mt-4">
-                            <ProductModal className='btn btn-success m-2'></ProductModal>
+                            <ProductModal className='btn btn-success m-2' product = {props.product}></ProductModal>
                             <Button onClick={setCount} className='btn btn-success m-2'>Add to Cart</Button>
                         </div>
                     </Card.Body>
