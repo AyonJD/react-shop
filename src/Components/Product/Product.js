@@ -7,7 +7,10 @@ const Product = props => {
     const { setCount } = props;
     const { image, title, description, price, rating } = props.product;
     return (
-        <div className='col-md-4 col-sm-6 col-12 mb-3'>
+        <div className='col-md-4 col-sm-6 col-12 mb-3'
+        div data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+        >
                 <Card className='m-2 card-height'>
                     <Card.Img variant="top" src={image} className = 'w-50 mx-auto mt-4'/>
                     <Card.Body className = 'd-flex flex-column justify-content-end'>
